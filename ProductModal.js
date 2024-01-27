@@ -1,4 +1,4 @@
-//module不同作用域
+//module為不同作用域 需重新載入已在全域宣告的變數或物件
 import { onMounted } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
 let productModal = null;
 
@@ -37,6 +37,7 @@ export default {
 
     //onMounted包在setup內
     onMounted(() => {
+      // 在此實體化才能正確讀取
       productModal = new bootstrap.Modal(
         document.getElementById("productModal"),
         {

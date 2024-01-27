@@ -1,5 +1,6 @@
 export default {
   setup(props, { emit }) {
+    // 將emit寫在function內回傳出去
     const emitPages = (i) => {
       emit("emit-pages", i);
     };

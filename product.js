@@ -61,7 +61,7 @@ createApp({
         delProductModal2.show();
       }
     };
-
+    // 將元件內部的modal利用emit帶出後賦值到此作用域變數上
     const emitProductModal = (productModal) => {
       productModal2 = productModal;
     };
