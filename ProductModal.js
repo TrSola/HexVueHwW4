@@ -66,7 +66,8 @@ export default {
           <div class="modal-content border-0">
             <div class="modal-header bg-dark text-white">
               <h5 id="productModalLabel" class="modal-title">
-                <span>新增產品</span>
+                <span v-if="status.value === 'new'">新增產品</span>
+                <span v-else>編輯產品</span>
               </h5>
               <button
                 type="button"
@@ -169,7 +170,7 @@ export default {
                       />
                     </div>
                     <div class="mb-3 col-md-6">
-                      <label for="price" class="form-label">單位</label>
+                      <label for="unit" class="form-label">單位</label>
                       <input
                         id="unit"
                         type="text"

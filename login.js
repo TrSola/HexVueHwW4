@@ -16,7 +16,6 @@ createApp({
           document.cookie = `WillyToken=${token};expires=${new Date(
             expired
           )}; path=/`;
-          alert("載入中");
           window.location = "product.html";
         })
         .catch((err) => alert(err.response.data.message));
